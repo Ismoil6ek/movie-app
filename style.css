@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap');
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary-color: #22254b;
+    --secondary-color: #373b69;
+}
+
+
+/* Hide scrollbar */
+
+html::-webkit-scrollbar {
+    width: 0;
+}
+
+body {
+    background-color: var(--primary-color);
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+
+nav {
+    padding: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+header {
+    background-color: var(--secondary-color);
+}
+
+
+/* Search */
+
+.search {
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    color: #fff;
+    font-family: inherit;
+}
+
+.search:focus {
+    outline: 0;
+    background-color: var(--primary-color);
+}
+
+.search::placeholder {
+    color: #7378c5;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+
+/* movie card */
+
+.movie {
+    width: 300px;
+    margin: 1rem;
+    border-radius: 3px;
+    box-shadow: 0.4px 8px 10px rgba(0, 0, 0, 0.1);
+    background-color: var(--secondary-color);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform .3s ease-in-out;
+    /* Animation */
+}
+
+.movie:hover {
+    transform: scale(1.03)
+}
+
+.movie img {
+    width: 100%;
+}
+
+.movie-info {
+    color: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem 1rem;
+    letter-spacing: 0.5px;
+}
+
+.movie-info h3 {
+    margin-top: 0;
+}
+
+.movie-info span {
+    background-color: var(--primary-color);
+    padding: 0.25rem 0.5rem;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+.green {
+    color: lightgreen;
+}
+
+.orange {
+    color: orange;
+}
+
+.red {
+    color: red;
+}
+
+.overview {
+    font-size: 1rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: #eee;
+    background-color: #171936;
+    padding: 1rem;
+    max-height: 100%;
+    transform: translateY(101%);
+    transition: transform 0.3s ease-in;
+}
+
+.movie:hover .overview {
+    transform: translateY(0)
+}
+
+.no-results {
+    color: white;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    max-width: 1440px;
+    margin: 10px auto;
+}
+
+.year_github {
+    display: flex;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+.year_github a {
+    color: #eee;
+    margin: 15px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+    font-size: 1.25rem;
+}
+
+.year_github a:hover {
+    color: #7378c5;
+}
+
+.logo-icon1 {
+    width: 50px;
+    height: 50px;
+    fill: #eee;
+    transition: all 0.2s ease-in-out;
+}
+
+.logo-icon1:hover {
+    fill: #7378c5;
+}
+
+.logo-icon2 {
+    width: 135px;
+    height: 50px;
+    fill: #eee;
+    transition: all 0.2s ease-in-out;
+}
+
+.logo-icon2:hover {
+    fill: #7378c5;
+}
+
+#clear {
+    border-radius: 50%;
+    z-index: 2;
+    border: none;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    cursor: pointer;
+    color: white;
+    background-color: #7378c5;
+    transform: translateX(2px);
+    transition: all 0.3s ease-in-out;
+    margin: auto 0px auto 10px;
+}
+
+#clear:hover {
+    color: #171936;
+    background-color: #fff;
+}
