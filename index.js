@@ -18,7 +18,7 @@ function getMovies(url) {
     fetch(url).then(res => res.json()).then(data => {
 
         // showing on console
-        console.log("Data from given API :", data.results)
+        console.log("Data from given API :", data)
 
         // check if API working
         if (data.results.length !== 0) {
